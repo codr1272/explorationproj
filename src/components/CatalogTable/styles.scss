@@ -1,0 +1,164 @@
+.catalogTable {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__container {
+    margin: 15px 20px;
+  }
+
+  &_Additional {
+    margin-left: 20px;
+    width: calc(100% - 19px);
+    padding: 0;
+
+    &-info {
+      border-right: 2px solid #838383;
+      border-left: 2px solid #838383;
+      border-bottom: 2px solid #838383;
+    }
+  }
+
+  &-additionalInfo {
+    padding: 0;
+  }
+
+  &__tr {
+    color: #232023;
+
+    &-header {
+      border-top: 2px solid #838383;
+    }
+
+    &.clicked {
+      border-right: 2px solid #838383;
+      border-left: 2px solid #838383;
+      border-bottom: 2px solid #838383;
+
+      & + .catalogTable__tr {
+        border: 1px solid black;
+      }
+    }
+  }
+
+  .catalogTable__td-logo:first-child{
+    width: 30px;
+    padding: 1px 2px;
+  }
+
+  &__input {
+    width: 40px;
+    text-align: center;
+  }
+
+  &__select {
+    width: auto;
+    text-align: center;
+  }
+
+  &__input,
+  &__select {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    border: 2px solid #326d0c;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: .5em;
+    transition: all linear 0.1s;
+    // min-width: 50px;
+    // max-width: 200px;
+
+    &:focus {
+      border: 2px solid #387a0b;
+    }
+  }
+
+  &__option:checked {
+    color: #fff;
+    background-color: #38750eb2;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-color: #326d0c;
+    border-radius: 4px 4px 0 0;
+    color: #fff;
+  }
+
+  &__search {
+    outline: none;
+  }
+
+
+  &__th {
+    background-color: #f2f2f2;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #e5e5e5;
+    }
+
+    &-asc::after {
+      display: inline-block;
+      content: " ▼";
+    }
+
+    &-desc::after {
+      display: inline-block;
+      content: " ▲";
+    }
+  }
+
+  &__th,
+  &__td {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 8px 4px 8px 4px;
+    text-align: center;
+  }
+
+  &__user {
+    color: red;
+    font-weight: bold;
+  }
+
+  &__tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  &__tr:hover {
+    background-color: #e5e5e5;
+  }
+}
+
+.clicked {
+  background-color: #dddcdc !important;
+}
+
+.sweetPagination .paginationUL .pageItem .activeButton {
+  background-color: #326d0c !important;
+}
+
+.addIcon {
+  fill: #326d0c;
+  transition: all linear 0.3s;
+
+
+  &:hover {
+    scale: 1.1;
+    fill: #275309;
+  }
+
+  &:active {
+    fill: #1f3b0c;
+  }
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

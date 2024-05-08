@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+$bg: #f5f5f5;
+$button: #FFD700;
+$buttonHover: #FFC300;
+$buttonFocus: #fce293;
+$buttonActive: #fdcc38;
+$border: #1a1b1d;
+$text: #0a0c0e;
+
+.wrapper {
+  width: 300px;
+  margin: 12% auto;
+}
+
+body {
+  background: $bg;
+}
+
+#man-people-user,
+#lock-locker {
+  fill: black;
+}
+
+.login__form {
+  position: relative;
+}
+
+.login__sign-in {
+  float: left;
+  color: $text;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.login__button {
+  float: right;
+  color: #7f8084;
+  border: 1px solid $border;
+  padding: 7px 15px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.login__button:hover {
+  color: #595d61;
+  scale: 1.01;
+}
+
+.login__lock {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  padding: 7px;
+  left: 5px;
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    background-color: $border;
+    top: 0px;
+    left: 100%;
+  }
+}
+
+.login__user {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  padding: 7px;
+  left: 5px;
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    background-color: $border;
+    top: 0px;
+    left: 100%;
+  }
+}
+
+.login__input {
+  width: 100%;
+  padding: 5px;
+  height: 40px;
+  border-radius: 3px;
+  margin: 5px 0;
+  outline: none;
+}
+
+.login__input[type="email"]:focus,
+.login__input[type="password"]:focus {
+  border: 2px solid $border;
+  box-shadow: none;
+}
+
+.login__user-input:focus .login__user {
+  background-color: white !important;
+}
+
+
+.login__input[type="email"] {
+  background-color: transparent;
+  border: 1px solid $border;
+  padding-left: 45px;
+  color: #7f8084;
+}
+
+.login__input[type="password"] {
+  background-color: transparent;
+  border: 1px solid $border;
+  padding-left: 45px;
+  color: #7f8084;
+}
+
+.login__input[type="submit"] {
+  background-color: $button;
+  border: none;
+  color: $text;
+  text-align: center;
+  font-size: 0.8em;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.1s linear;
+
+  &:hover {
+    background-color: $buttonHover;
+  }
+
+  &:focus {
+    background-color: $buttonFocus;
+  }
+
+  &:active {
+    background-color: $buttonActive;
+  }
+}
+
+.login__input[type="radio"] {
+  display: none;
+}
+
+.login__switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.login__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.login__switch input {
+  display: none;
+}
+
+.login__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 24px;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.login__slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked+.login__slider {
+  background-color: #525551;
+}
+
+input:focus+.login__slider {
+  box-shadow: 0 0 1px #525551;
+}
+
+input:checked+.login__slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+.login__slider.round {
+  border-radius: 34px;
+}
+
+.login__slider.round:before {
+  border-radius: 50%;
+}
+
+.login__check-label {
+  font-size: 0.8em;
+  color: #7f8084;
+  padding: 3px 0;
+  margin-left: 10px;
+}
+
+
+.login__forgot-label {
+  font-size: 0.8em;
+  color: #7f8084;
+  padding: 3px 0;
+  margin-left: 40px;
+  cursor: pointer;
+}

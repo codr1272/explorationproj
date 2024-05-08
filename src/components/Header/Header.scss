@@ -1,0 +1,35 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navigation__company-name {
+  color: #326d0c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all linear 0.1s;
+  margin-right: 50px;
+
+  &:hover {
+    color: #2f7401;
+    scale: 1.02;
+  }
+}
+
+.navigation__icon {
+  display: flex;
+  align-items: center;
+  color: #326d0c;
+  transition: all linear 0.1s;
+
+  &:hover {
+    color: #2f7401;
+    scale: 1.1;
+  }
+}
+
+.HeaderWrapper {
+  display: flex;
+}
